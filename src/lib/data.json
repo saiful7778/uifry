@@ -3,19 +3,12 @@
     "navlinks": [
       {
         "navName": "Home",
-        "path": "/"
+        "path": "/#home"
       },
-      {
-        "navName": "About Us",
-        "path": "/about-us"
-      },
-      {
-        "navName": "Pricing",
-        "path": "/pricing"
-      },
+
       {
         "navName": "Features",
-        "path": "/features"
+        "path": "/#features"
       }
     ],
     "ctaButton": {

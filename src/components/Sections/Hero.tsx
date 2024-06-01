@@ -10,7 +10,10 @@ import Star from "../Star";
 
 export default function Hero() {
   return (
-    <section className="relative my-4 flex flex-col justify-center md:flex-row">
+    <section
+      id="home"
+      className="relative my-4 flex flex-col justify-center md:flex-row"
+    >
       <Star className="left-0 top-0" />
       <Star className="right-0 top-0" />
       <div className="relative mt-20 w-full max-md:order-2 md:w-1/2">

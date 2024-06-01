@@ -7,7 +7,10 @@ import Star from "../Star";
 
 export default function Feature() {
   return (
-    <section className="relative my-4 flex flex-col justify-between gap-4 md:flex-row">
+    <section
+      id="features"
+      className="relative my-4 flex flex-col justify-between gap-4 md:flex-row"
+    >
       <div className="relative flex w-full justify-center md:w-2/5">
         <Image src={FeatureBgImage} alt="feature image" />
         <Image

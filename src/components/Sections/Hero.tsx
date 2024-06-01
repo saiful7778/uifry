@@ -2,7 +2,6 @@ import jsonData from "@/lib/data.json";
 import Blob from "../Blob";
 import Image from "next/image";
 import HeroImage from "../../../public/images/hero-phone-image.png";
-import HeroBgImage from "../../../public/images/hero-phone-bg-image.png";
 import HeroElement from "../../../public/images/hero-element.png";
 import Button from "../ui/button";
 import Link from "next/link";

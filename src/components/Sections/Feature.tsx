@@ -1,4 +1,3 @@
-import HeroBgImage from "../../../public/images/hero-phone-bg-image.png";
 import FeatureBgImage from "../../../public/images/iPhone-13-Pro-Front.png";
 import jsonData from "@/lib/data.json";
 import Image from "next/image";

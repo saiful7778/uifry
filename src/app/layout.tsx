@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import StateContextProvider from "@/context/StateContext";
 import ThemeContextProvider from "@/context/ThemeContext";
+import Footer from "@/components/shared/Footer";
+import Toaster from "@/components/ui/toaster";
 
 const clashDisplayFont = localFont({
   src: [
@@ -55,7 +57,9 @@ export default function RootLayout({
                 <Navbar />
               </header>
               <main className="container">{children}</main>
+              <Footer />
             </div>
+            <Toaster />
           </StateContextProvider>
         </ThemeContextProvider>
       </body>

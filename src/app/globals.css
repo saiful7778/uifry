@@ -47,6 +47,9 @@
   body {
     @apply bg-background p-1 font-clash-display text-foreground md:my-8;
   }
+  img {
+    @apply select-none;
+  }
 }
 
 @layer components {

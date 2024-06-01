@@ -5,10 +5,13 @@
         "navName": "Home",
         "path": "/#home"
       },
-
       {
         "navName": "Features",
         "path": "/#features"
+      },
+      {
+        "navName": "Advantage",
+        "path": "/#advantage"
       }
     ],
     "ctaButton": {
@@ -17,31 +20,44 @@
     }
   },
   "hero": {
-    "headline": "Discover Our App",
-    "subheadline": "The best app for all your needs.",
+    "headline": "Make The Best Financial Decisions",
+    "subheadline": "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
     "ctaButtons": [
       {
-        "text": "Download Now",
-        "link": "/download"
+        "text": "Get Started",
+        "link": "/#get-started"
       },
       {
-        "text": "Learn More",
-        "link": "#features"
+        "text": "Watch Video",
+        "link": "/#watch-video"
       }
     ]
   },
-  "features": [
-    {
-      "title": "Feature One",
-      "description": "Description of feature one.",
-      "icon": "https://via.placeholder.com/100"
-    },
-    {
-      "title": "Feature Two",
-      "description": "Description of feature two.",
-      "icon": "https://via.placeholder.com/100"
-    }
-  ],
+  "features": {
+    "title": "Uifry Premium",
+    "items": [
+      {
+        "title": "Budgeting Intervals",
+        "description": "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+        "icon": "https://via.placeholder.com/100"
+      },
+      {
+        "title": "Budgeting Intervals",
+        "description": "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+        "icon": "https://via.placeholder.com/100"
+      },
+      {
+        "title": "Budgeting Intervals",
+        "description": "Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu adipiscing sociis arcu lorem porttitor.",
+        "icon": "https://via.placeholder.com/100"
+      }
+    ]
+  },
+  "advantage": {
+    "title": "Why Choose Uifry?",
+    "subtitle": "Clever Notifications",
+    "details": "Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris etiam odio. Duis tristique lacus, et blandit viverra nisl velit. Sed mattis rhoncus, diam suspendisse sit nunc, gravida eu. Lectus eget eget ac dolor neque lorem sapien, suspendisse aliquam."
+  },
   "testimonials": [
     {
       "name": "User One",

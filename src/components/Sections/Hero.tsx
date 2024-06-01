@@ -12,15 +12,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative my-4 flex flex-col justify-center md:flex-row"
+      className="relative my-4 flex flex-col justify-between md:flex-row"
     >
       <Star className="left-0 top-0" />
       <Star className="right-0 top-0" />
-      <div className="relative mt-20 w-full max-md:order-2 md:w-1/2">
+      <div className="relative mt-20 w-full max-md:order-2 md:w-[55%]">
         <Blob className="-top-5 right-56" />
-        <h1 className="text-6xl font-bold md:text-7xl">
-          {jsonData.hero.headline}
-        </h1>
+        <h1 className="text-6xl font-bold">{jsonData.hero.headline}</h1>
         <p className="my-4 font-medium text-details">
           {jsonData.hero.subheadline}
         </p>

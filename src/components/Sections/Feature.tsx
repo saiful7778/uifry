@@ -9,7 +9,7 @@ export default function Feature() {
   return (
     <section
       id="features"
-      className="relative my-4 flex flex-col justify-between gap-4 md:flex-row"
+      className="relative my-16 flex flex-col justify-between gap-4 md:flex-row"
     >
       <div className="relative flex w-full justify-center md:w-2/5">
         <Image src={FeatureBgImage} alt="feature image" />
@@ -23,11 +23,12 @@ export default function Feature() {
       </div>
       <div className="relative mt-20 w-full space-y-3 md:w-1/2">
         <div className="text-lg uppercase text-primary">features</div>
-        <h2 className="!mb-6 text-5xl font-bold">Uifry Premium</h2>
-        {jsonData.features.map((feature, idx) => (
+        <h2 className="!mb-6 text-5xl font-bold">{jsonData.features.title}</h2>
+        {jsonData.features.items.map((feature, idx) => (
           <div className="flex gap-2" key={"feature-" + idx}>
             <div className="mt-1">
               <Image
+                className="size-5"
                 src={feature.icon}
                 width={20}
                 height={20}

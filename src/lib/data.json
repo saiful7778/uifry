@@ -1,4 +1,28 @@
 {
+  "navbar": {
+    "navlinks": [
+      {
+        "navName": "Home",
+        "path": "/"
+      },
+      {
+        "navName": "About Us",
+        "path": "/about-us"
+      },
+      {
+        "navName": "Pricing",
+        "path": "/pricing"
+      },
+      {
+        "navName": "Features",
+        "path": "/features"
+      }
+    ],
+    "ctaButton": {
+      "text": "Download",
+      "link": "/download"
+    }
+  },
   "hero": {
     "headline": "Discover Our App",
     "subheadline": "The best app for all your needs.",

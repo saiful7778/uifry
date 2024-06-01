@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import StateContextProvider from "@/context/StateContext";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 const clashDisplayFont = localFont({
   src: [
@@ -39,7 +42,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clashDisplayFont.variable}>{children}</body>
+      <body className={clashDisplayFont.variable}>
+        <ThemeContextProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <StateContextProvider>
+            <div className="relative min-h-screen w-full">
+              <header className="container">
+                <Navbar />
+              </header>
+              <main className="container">{children}</main>
+            </div>
+          </StateContextProvider>
+        </ThemeContextProvider>
+      </body>
     </html>
   );
 }

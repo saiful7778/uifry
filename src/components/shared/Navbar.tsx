@@ -8,6 +8,7 @@ import { ReactNode, useState } from "react";
 import Button from "../ui/button";
 import { SquareMenu, SquareX } from "lucide-react";
 import ThemeChange from "../ThemeChange";
+import Tooltip from "../ui/tooltip";
 
 export default function Navbar() {
   const [menu, setMenu] = useState<boolean>(false);
@@ -28,12 +29,23 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="flex items-center gap-2">
-          <Button className="max-md:hidden" asChild>
-            <Link href={jsonData.navbar.ctaButton.link}>
-              {jsonData.navbar.ctaButton.text}
-            </Link>
-          </Button>
+          <Tooltip.provider>
+            <Tooltip>
+              <Tooltip.trigger asChild>
+                <Button className="max-md:hidden" asChild>
+                  <Link href={jsonData.navbar.ctaButton.link}>
+                    {jsonData.navbar.ctaButton.text}
+                  </Link>
+                </Button>
+              </Tooltip.trigger>
+              <Tooltip.content>
+                <p>Click to download</p>
+              </Tooltip.content>
+            </Tooltip>
+          </Tooltip.provider>
+
           <ThemeChange />
+
           <Button
             onClick={() => setMenu((l) => !l)}
             className="md:hidden"

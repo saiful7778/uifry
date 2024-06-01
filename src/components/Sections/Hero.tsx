@@ -1,3 +1,4 @@
+"use client";
 import jsonData from "@/lib/data.json";
 import Blob from "../Blob";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import Button from "../ui/button";
 import Link from "next/link";
 import Star from "../Star";
 import Ellipse from "../Ellipse";
+import Tooltip from "../ui/tooltip";
 
 export default function Hero() {
   return (
@@ -23,16 +25,35 @@ export default function Hero() {
           {jsonData.hero.subheadline}
         </p>
         <div className="flex flex-wrap items-center gap-4">
-          <Button asChild>
-            <Link href={jsonData.hero.ctaButtons[0].link}>
-              {jsonData.hero.ctaButtons[0].text}
-            </Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href={jsonData.hero.ctaButtons[1].link}>
-              {jsonData.hero.ctaButtons[1].text}
-            </Link>
-          </Button>
+          <Tooltip.provider>
+            <Tooltip>
+              <Tooltip.trigger asChild>
+                <Button asChild>
+                  <Link href={jsonData.hero.ctaButtons[0].link}>
+                    {jsonData.hero.ctaButtons[0].text}
+                  </Link>
+                </Button>
+              </Tooltip.trigger>
+              <Tooltip.content>
+                <p>Click to get started</p>
+              </Tooltip.content>
+            </Tooltip>
+          </Tooltip.provider>
+
+          <Tooltip.provider>
+            <Tooltip>
+              <Tooltip.trigger asChild>
+                <Button variant="ghost" asChild>
+                  <Link href={jsonData.hero.ctaButtons[1].link}>
+                    {jsonData.hero.ctaButtons[1].text}
+                  </Link>
+                </Button>
+              </Tooltip.trigger>
+              <Tooltip.content>
+                <p>Click to watch new video</p>
+              </Tooltip.content>
+            </Tooltip>
+          </Tooltip.provider>
         </div>
         <Star className="bottom-1/2 left-1/3" />
         <Image src={HeroElement} alt="Hero element" />

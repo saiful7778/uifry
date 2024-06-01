@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-center gap-2">
+      <nav className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-10">
           <SiteLogo />
           <ul className="flex items-center gap-6 max-md:hidden">
@@ -45,8 +45,8 @@ export default function Navbar() {
       </nav>
       <div
         className={cn(
-          "fixed top-0 z-[110] flex h-screen w-full max-w-xs flex-col items-center gap-10 bg-background/50 p-4 shadow backdrop-blur-sm duration-300",
-          menu ? "right-0" : "-right-full"
+          "bg-background/20 fixed top-0 z-[110] flex h-screen w-full max-w-xs flex-col items-center gap-10 overflow-auto p-4 shadow backdrop-blur-md duration-300 max-md:hidden",
+          menu ? "right-0" : "-right-full",
         )}
       >
         <div className="absolute left-0 top-0 z-[111] m-4">
@@ -77,8 +77,8 @@ function NavLink({ children, path }: NavLinkProps) {
   return (
     <Link
       className={cn(
-        "font-medium text-xl hover:text-primary",
-        pathName === path && "text-primary"
+        "text-xl font-medium hover:text-primary",
+        pathName === path && "text-primary",
       )}
       href={path}
     >

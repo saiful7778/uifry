@@ -13,7 +13,7 @@
     --blob-primary: #ff5555;
     --blob-secondary: #fde598;
 
-    --details: #00000050;
+    --details: #00000090;
 
     --accent: #000000;
     --accent-foreground: #ffffff;
@@ -45,6 +45,25 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-clash-display md:my-8 p-1;
+    @apply bg-background p-1 font-clash-display text-foreground md:my-8;
+  }
+}
+
+@layer components {
+  .container {
+    @apply xl:max-w-[1100px];
+  }
+}
+
+.star {
+  animation: spin 50s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

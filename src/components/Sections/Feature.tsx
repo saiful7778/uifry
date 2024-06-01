@@ -4,6 +4,7 @@ import jsonData from "@/lib/data.json";
 import Image from "next/image";
 import Blob from "../Blob";
 import Star from "../Star";
+import Ellipse from "../Ellipse";
 
 export default function Feature() {
   return (
@@ -12,12 +13,13 @@ export default function Feature() {
       className="relative my-16 flex flex-col justify-between gap-4 md:flex-row"
     >
       <div className="relative flex w-full justify-center md:w-2/5">
-        <Image src={FeatureBgImage} alt="feature image" />
         <Image
-          className="absolute inset-0 top-0 z-[-1]"
-          src={HeroBgImage}
-          alt="featrue bg image"
+          src={FeatureBgImage}
+          width={200}
+          height={366}
+          alt="feature image"
         />
+        <Ellipse className="top-[5%]" />
         <Blob className="bottom-[10%] left-0" />
         <Star className="left-0 top-[5%]" />
       </div>

@@ -7,6 +7,7 @@ import HeroElement from "../../../public/images/hero-element.png";
 import Button from "../ui/button";
 import Link from "next/link";
 import Star from "../Star";
+import Ellipse from "../Ellipse";
 
 export default function Hero() {
   return (
@@ -40,11 +41,7 @@ export default function Hero() {
       <div className="relative w-full max-md:order-1 md:w-2/5">
         <div className="relative">
           <Image src={HeroImage} alt="Hero image" />
-          <Image
-            className="absolute right-0 top-0 z-[-1]"
-            src={HeroBgImage}
-            alt="Hero bg image"
-          />
+          <Ellipse className="top-[8%]" />
           <Blob className="bottom-14 right-56" />
         </div>
         <Star className="bottom-1/2 left-0" />

@@ -5,6 +5,7 @@ import jsonData from "@/lib/data.json";
 import { Bell } from "lucide-react";
 import Star from "../Star";
 import Blob from "../Blob";
+import Ellipse from "../Ellipse";
 
 export default function Advantage() {
   return (
@@ -25,15 +26,16 @@ export default function Advantage() {
         </div>
         <p className="text-details">{jsonData.advantage.details}</p>
       </div>
-      <div className="relative flex w-full justify-end md:w-2/5">
-        <Image src={AdvantageBgImage} alt="Advantage image" />
+      <div className="relative flex w-full justify-center md:w-2/5">
         <Image
-          className="absolute inset-0 top-0 z-[-1]"
-          src={HeroBgImage}
-          alt="featrue bg image"
+          src={AdvantageBgImage}
+          width={250}
+          height={400}
+          alt="Advantage image"
         />
+        <Ellipse className="top-[5%]" />
         <Blob className="bottom-[10%] left-0" />
-        <Star className="left-0 top-[5%]" />
+        <Star className="right-0 top-[5%]" />
       </div>
     </section>
   );

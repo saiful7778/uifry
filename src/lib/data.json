@@ -89,5 +89,66 @@
       "price": "$19.99/month",
       "features": ["Feature A", "Feature B", "Feature C", "Feature D"]
     }
-  ]
+  ],
+  "footer": {
+    "email": "help@frybix.com",
+    "phone": "+1 234 456 678 89",
+    "linkList": [
+      {
+        "title": "Links",
+        "links": [
+          {
+            "linkName": "Home",
+            "path": "/#home"
+          },
+          {
+            "linkName": "About Us",
+            "path": "/#about-us"
+          },
+          {
+            "linkName": "Bookings",
+            "path": "/bookings"
+          },
+          {
+            "linkName": "Blog",
+            "path": "/blog"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "linkName": "Terms Of Use",
+            "path": "/terms-of-use"
+          },
+          {
+            "linkName": "Privacy Policy",
+            "path": "/privacy-policy"
+          },
+          {
+            "linkName": "Cookie Policy",
+            "path": "/cookie-policy"
+          }
+        ]
+      },
+      {
+        "title": "Product",
+        "links": [
+          {
+            "linkName": "Take Tour",
+            "path": "/take-tour"
+          },
+          {
+            "linkName": "Live Chat",
+            "path": "/live-chat"
+          },
+          {
+            "linkName": "Reveiws",
+            "path": "/reveiws"
+          }
+        ]
+      }
+    ]
+  }
 }

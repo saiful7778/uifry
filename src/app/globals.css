@@ -33,6 +33,10 @@
 
     --accent: #ffffff;
     --accent-foreground: #000000;
+
+    --border: #ffffff;
+    --input: #ffffff;
+    --ring: #ffffff;
   }
 }
 
@@ -41,6 +45,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-clash-display;
+    @apply bg-background text-foreground font-clash-display md:my-8 p-1;
   }
 }

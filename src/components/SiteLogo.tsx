@@ -1,3 +1,4 @@
+"use client";
 import siteLogoLight from "../../public/images/site-logo-light.png";
 import siteLogoDark from "../../public/images/site-logo-dark.png";
 import Image from "next/image";

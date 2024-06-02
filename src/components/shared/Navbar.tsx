@@ -9,6 +9,7 @@ import Button from "../ui/button";
 import { SquareMenu, SquareX } from "lucide-react";
 import ThemeChange from "../ThemeChange";
 import Tooltip from "../ui/tooltip";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [menu, setMenu] = useState<boolean>(false);
@@ -21,7 +22,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between gap-2">
+      <motion.nav
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, type: "spring" }}
+        className="flex items-center justify-between gap-2"
+      >
         <div className="flex items-center gap-10">
           <SiteLogo />
           <ul className="flex items-center gap-6 max-md:hidden">
@@ -54,10 +60,10 @@ export default function Navbar() {
             <SquareMenu size={20} />
           </Button>
         </div>
-      </nav>
+      </motion.nav>
       <div
         className={cn(
-          "bg-background/20 fixed top-0 z-[110] flex h-screen w-full max-w-xs flex-col items-center gap-10 overflow-auto p-4 shadow backdrop-blur-md duration-300 max-md:hidden",
+          "bg-background/20 fixed top-0 z-[110] flex h-screen w-full max-w-xs flex-col items-center gap-10 overflow-auto p-4 shadow backdrop-blur-md duration-300 md:hidden",
           menu ? "right-0" : "-right-full",
         )}
       >

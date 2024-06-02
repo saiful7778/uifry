@@ -29,8 +29,8 @@
     --background: theme("backgroundColor.gray.950");
     --foreground: theme("textColor.gray.50");
 
-    --blob-primary: #ff555530;
-    --blob-secondary: #fde59830;
+    --blob-primary: #ff555550;
+    --blob-secondary: #fde59850;
 
     --details: theme("textColor.gray.300");
 
@@ -67,6 +67,9 @@
 .star {
   animation: spin 50s linear infinite;
 }
+.star-reverse {
+  animation: spin 50s linear infinite reverse;
+}
 
 @keyframes spin {
   from {
@@ -78,18 +81,45 @@
 }
 
 .blob-primary {
-  animation: blobAnimation 20s infinite linear;
+  animation: blobAnimation 10s infinite linear;
 }
 
 .blob-secondary {
-  animation: blobAnimation 20s infinite linear reverse;
+  animation: blobAnimation 10s infinite linear reverse;
 }
 
 @keyframes blobAnimation {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    width: 250px;
+    height: 150;
+  }
+  25% {
+    transform: scale(1) rotate(15deg);
+    width: 200px;
+    height: 250px;
+  }
+  75% {
+    transform: scale(1) rotate(-15deg);
+    width: 220px;
+    height: 100px;
+  }
+  100% {
+    transform: scale(0.8) rotate(0deg);
+    width: 250px;
+    height: 150px;
+  }
+}
+
+.ellipse > * {
+  animation: ellipseAnimation 2s infinite linear alternate;
+}
+
+@keyframes ellipseAnimation {
   from {
-    rotate: 0deg;
+    border-color: theme("textColor.gray.400");
   }
   to {
-    rotate: 360deg;
+    border-color: theme("textColor.gray.700");
   }
 }

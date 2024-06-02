@@ -8,17 +8,23 @@ import { useTheme } from "next-themes";
 export default function Star({ className }: { className?: string }) {
   const { resolvedTheme } = useTheme();
 
-  return resolvedTheme === "dark" ? (
-    <Image
-      className={cn("star absolute z-[-1]", className)}
-      src={starDark}
-      alt="star image"
-    />
-  ) : (
-    <Image
-      className={cn("star absolute z-[-1]", className)}
-      src={starLight}
-      alt="star image"
-    />
+  const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+  return (
+    <>
+      <div
+        className={cn(
+          "absolute z-[-1]",
+          randomNumber < 5 ? "star-reverse" : "star",
+          className,
+        )}
+      >
+        {resolvedTheme === "dark" ? (
+          <Image src={starDark} alt="star image" />
+        ) : (
+          <Image src={starLight} alt="star image" />
+        )}
+      </div>
+    </>
   );
 }

@@ -1,5 +1,11 @@
 import cn from "@/lib/utils/cn";
 
+const style = {
+  base: "relative h-[150px] w-[250px] rounded-[50%] blur-[30px] filter",
+  primary: "bg-blob-primary blob-primary",
+  secondary: "bg-blob-secondary blob-secondary top-1/2 absolute z-[-1]",
+};
+
 export default function Blob({
   className,
   firstClassName,
@@ -10,19 +16,11 @@ export default function Blob({
   secoundClassName?: string;
 }) {
   return (
-    <div className={cn("blob absolute z-[-1]", className)}>
-      <div
-        className={cn(
-          "blob-primary inset-0 z-[-1] h-[150px] w-[250px] rounded-[50%] bg-blob-primary blur-[30px] filter",
-          firstClassName,
-        )}
-      />
-      <div
-        className={cn(
-          "blob-secondary absolute inset-0 top-[20%] z-[-2] h-[150px] w-[250px] rounded-[50%] bg-blob-secondary blur-[40px] filter",
-          secoundClassName,
-        )}
-      />
-    </div>
+    <>
+      <div className={cn("absolute z-[-1]", className)}>
+        <div className={cn(style.base, style.primary, firstClassName)} />
+        <div className={cn(style.base, style.secondary, secoundClassName)} />
+      </div>
+    </>
   );
 }

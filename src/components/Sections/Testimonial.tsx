@@ -1,35 +1,62 @@
+"use client";
 import cn from "@/lib/utils/cn";
 import Blob from "../Blob";
 import Ellipse from "../Ellipse";
 import jsonData from "@/lib/data.json";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { MessageSquareQuote } from "lucide-react";
 import ClientReview from "../ClientReview";
+import { motion } from "framer-motion";
 
 export default function Testimonial() {
+  const animation = {
+    initial: { opacity: 0, first: { x: -50 }, second: { x: 50 } },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { amount: "some", once: true },
+    transition: { duration: 1, type: "spring" },
+  } as const;
+
   return (
-    <section className="my-16">
-      <div className="mx-auto w-full max-w-md text-center">
+    <motion.section className="my-16">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={animation.viewport}
+        transition={animation.transition}
+        className="mx-auto w-full max-w-md text-center"
+      >
         <div className="text-lg uppercase text-primary">Testimonial</div>
         <h2 className="!mb-6 text-5xl font-bold">
           What our users say about us?
         </h2>
-      </div>
+      </motion.div>
       <div className="relative my-16 flex flex-col justify-between gap-4 md:flex-row">
-        <div className="relative flex w-full justify-center md:w-2/5">
+        <motion.div
+          initial={{ ...animation.initial, ...animation.initial.first }}
+          whileInView={animation.whileInView}
+          viewport={animation.viewport}
+          transition={animation.transition}
+          className="relative flex w-full justify-center md:w-2/5"
+        >
           <ClientImagesSection />
           <Ellipse className="top-[5%]" />
           <Blob className="bottom-[30%] left-0" />
-        </div>
-        <div className="relative w-full space-y-3 md:w-1/2">
+        </motion.div>
+        <motion.div
+          initial={{ ...animation.initial, ...animation.initial.second }}
+          whileInView={animation.whileInView}
+          viewport={animation.viewport}
+          transition={animation.transition}
+          className="relative w-full space-y-3 md:w-1/2"
+        >
           <h2 className="!mb-6 text-3xl font-semibold">
             The best financial accounting app ever!
           </h2>
           <Blob className="right-0 top-0" />
           <ClientReview />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -66,6 +66,20 @@
       }
     ]
   },
+  "gallery": [
+    "home",
+    "office",
+    "outside",
+    "yard",
+    "ship",
+    "man",
+    "woman",
+    "hill",
+    "ocean",
+    "computer",
+    "desk",
+    "child"
+  ],
   "testimonials": [
     {
       "username": "Emily Smith",

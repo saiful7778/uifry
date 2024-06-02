@@ -1,9 +1,4 @@
 import cn from "@/lib/utils/cn";
-import client01 from "../../../public/images/clients/client-01.jpg";
-import client02 from "../../../public/images/clients/client-02.jpg";
-import client03 from "../../../public/images/clients/client-03.jpg";
-import client04 from "../../../public/images/clients/client-04.jpg";
-import client05 from "../../../public/images/clients/client-05.jpg";
 import Blob from "../Blob";
 import Ellipse from "../Ellipse";
 import jsonData from "@/lib/data.json";
@@ -39,56 +34,81 @@ export default function Testimonial() {
 }
 
 function ClientImagesSection() {
+  const clientClass = (idx: number) => {
+    switch (idx) {
+      case 0:
+        return "left-0 top-0";
+      case 1:
+        return "right-0 top-0";
+      case 3:
+        return "left-0 bottom-0";
+      case 4:
+        return "right-0 bottom-0";
+    }
+  };
+
   return (
     <div className="relative mr-auto h-[400px] w-full max-w-sm">
-      <ClientImage className="left-0 top-0" src={client01} alt="Client image" />
-      <ClientImage
-        className="right-0 top-0"
-        src={client02}
-        alt="Client image"
-      />
-      <div className="relative left-1/2 top-1/2 size-40 -translate-x-1/2 -translate-y-1/2">
-        <ClientImage
-          className="h-full w-full"
-          src={client03}
-          alt="Client image"
-        />
-        <span className="absolute -right-[15%] top-1/2 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-primary-foreground">
-          <MessageSquareQuote size={30} />
-        </span>
-      </div>
-      <ClientImage
-        className="bottom-0 left-0"
-        src={client04}
-        alt="Client image"
-      />
-      <ClientImage
-        className="bottom-0 right-0"
-        src={client05}
-        alt="Client image"
-      />
+      {jsonData.testimonials.map((ele, idx) => {
+        if (idx === 2) {
+          return (
+            <div
+              key={"clinet-image-" + idx}
+              className="relative left-1/2 top-1/2 size-40 -translate-x-1/2 -translate-y-1/2"
+            >
+              <ClientImage
+                className="h-full w-full"
+                src={`${ele.image.mainUrl}/160x160/${ele.image.queryKey}`}
+                width={160}
+                height={160}
+                alt="Client image"
+              />
+              <span className="absolute -right-[15%] top-1/2 flex size-14 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                <MessageSquareQuote size={30} />
+              </span>
+            </div>
+          );
+        } else {
+          return (
+            <ClientImage
+              key={"clinet-image-" + idx}
+              className={cn("size-24", clientClass(idx))}
+              src={`${ele.image.mainUrl}/90x90/${ele.image.queryKey}`}
+              width={90}
+              height={90}
+              alt="Client image"
+            />
+          );
+        }
+      })}
     </div>
   );
 }
 
 function ClientImage({
   className,
+  width,
+  height,
   src,
   alt,
 }: {
   className?: string;
-  src: StaticImageData;
+  width: number;
+  height: number;
+  src: string;
   alt: string;
 }) {
   return (
     <div
       className={cn(
-        "absolute size-24 overflow-hidden rounded-full border-2",
+        "absolute overflow-hidden rounded-full border-2",
         className,
       )}
     >
       <Image
         className="h-full w-full object-cover object-center"
+        width={width}
+        height={height}
         src={src}
         alt={alt}
       />

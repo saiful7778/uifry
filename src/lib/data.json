@@ -68,14 +68,44 @@
   },
   "testimonials": [
     {
-      "name": "User One",
-      "feedback": "This app is fantastic! It has changed my life.",
-      "avatar": "https://via.placeholder.com/30"
+      "username": "Emily Smith",
+      "image": {
+        "mainUrl": "https://source.unsplash.com",
+        "queryKey": "?businessman"
+      },
+      "feedback": "Great experience using this product! It has significantly improved my productivity and streamlined my workflow."
     },
     {
-      "name": "User Two",
-      "feedback": "I can't imagine my daily routine without this app.",
-      "avatar": "https://via.placeholder.com/30"
+      "username": "John Doe",
+      "image": {
+        "mainUrl": "https://source.unsplash.com",
+        "queryKey": "?man"
+      },
+      "feedback": "I've tried many similar products before, but this one stands out. It's user-friendly, efficient, and has excellent customer support."
+    },
+    {
+      "username": "Sophia Johnson",
+      "image": {
+        "mainUrl": "https://source.unsplash.com",
+        "queryKey": "?businesswoman"
+      },
+      "feedback": "This product exceeded my expectations. It's versatile and adaptable to different needs. Highly recommended!"
+    },
+    {
+      "username": "David Brown",
+      "image": {
+        "mainUrl": "https://source.unsplash.com",
+        "queryKey": "?man"
+      },
+      "feedback": "Impressive features and seamless integration with other tools. It has saved me a lot of time and effort in my daily tasks."
+    },
+    {
+      "username": "Emma Wilson",
+      "image": {
+        "mainUrl": "https://source.unsplash.com",
+        "queryKey": "?girl"
+      },
+      "feedback": "I'm amazed by the results I've achieved with this product. It's intuitive and has helped me achieve my goals faster than I anticipated."
     }
   ],
   "pricing": [

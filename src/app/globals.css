@@ -48,7 +48,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background p-2 font-clash-display text-foreground md:my-8;
+    @apply bg-background font-clash-display text-foreground;
   }
   img {
     @apply select-none;

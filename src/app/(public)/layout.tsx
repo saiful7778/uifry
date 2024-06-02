@@ -7,7 +7,7 @@ export default function PublicLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative min-h-screen w-full p-2 md:my-4">
       <header className="container">
         <Navbar />
       </header>

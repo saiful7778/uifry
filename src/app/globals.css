@@ -76,3 +76,20 @@
     transform: rotate(360deg);
   }
 }
+
+.blob-primary {
+  animation: blobAnimation 20s infinite linear;
+}
+
+.blob-secondary {
+  animation: blobAnimation 20s infinite linear reverse;
+}
+
+@keyframes blobAnimation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}

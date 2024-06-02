@@ -10,19 +10,19 @@ export default function Blob({
   secoundClassName?: string;
 }) {
   return (
-    <div className={cn("absolute z-[-1]", className)}>
+    <div className={cn("blob absolute z-[-1]", className)}>
       <div
         className={cn(
-          "z-[-1] h-[150px] w-[250px] rounded-[50%] bg-blob-primary blur-[50px] filter",
+          "blob-primary inset-0 z-[-1] h-[150px] w-[250px] rounded-[50%] bg-blob-primary blur-[30px] filter",
           firstClassName,
         )}
-      ></div>
+      />
       <div
         className={cn(
-          "absolute left-0 top-14 z-[-2] h-[150px] w-[250px] rounded-[50%] bg-blob-secondary blur-[50px] filter",
+          "blob-secondary absolute inset-0 top-[20%] z-[-2] h-[150px] w-[250px] rounded-[50%] bg-blob-secondary blur-[40px] filter",
           secoundClassName,
         )}
-      ></div>
+      />
     </div>
   );
 }

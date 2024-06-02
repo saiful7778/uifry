@@ -90,6 +90,36 @@
       "features": ["Feature A", "Feature B", "Feature C", "Feature D"]
     }
   ],
+  "FAQ": {
+    "title": "Frequently asked questions",
+    "subtitle": "FAQ",
+    "questions": [
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      },
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      },
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      },
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      },
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      },
+      {
+        "title": "The Best Financial Accounting App Ever!",
+        "description": "“Arcu at dictum sapien, mollis. Vulputate sit id accumsan, ultricies. In ultrices malesuada elit mauris."
+      }
+    ]
+  },
   "getStarted": {
     "title": "Ready To Get Started?",
     "subtitle": "Risus habitant leo egestas mauris diam eget morbi tempus vulputate.",

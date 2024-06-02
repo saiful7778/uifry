@@ -52,13 +52,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StateContextProvider>
-            <div className="relative min-h-screen w-full">
-              <header className="container">
-                <Navbar />
-              </header>
-              <main className="container">{children}</main>
-              <Footer />
-            </div>
+            {children}
             <Toaster />
           </StateContextProvider>
         </ThemeContextProvider>

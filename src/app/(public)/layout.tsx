@@ -7,11 +7,11 @@ export default function PublicLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden p-2 md:my-4">
+    <div className="relative mb-4 min-h-screen w-full overflow-x-hidden p-2">
       <header className="container">
         <Navbar />
       </header>
-      <main className="container">{children}</main>
+      <main className="container mt-16">{children}</main>
       <Footer />
     </div>
   );

@@ -17,7 +17,7 @@ export default function Testimonial() {
   } as const;
 
   return (
-    <motion.section className="my-16">
+    <section className="my-16">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Testimonial() {
           <ClientReview />
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

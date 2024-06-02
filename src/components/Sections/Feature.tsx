@@ -18,22 +18,23 @@ export default function Feature() {
   return (
     <section
       id="features"
-      className="relative my-16 flex flex-col justify-between gap-4 md:flex-row"
+      className="my-16 flex flex-col justify-between gap-4 md:flex-row"
     >
       <motion.div
         initial={{ ...animation.initial, ...animation.initial.first }}
         whileInView={animation.whileInView}
         viewport={animation.viewport}
         transition={animation.transition}
-        className="relative flex w-full justify-center md:w-2/5"
+        className="relative flex-1"
       >
         <Image
+          className="mx-auto"
           src={FeatureBgImage}
           width={200}
           height={366}
           alt="feature image"
         />
-        <Ellipse className="top-[5%]" />
+        <Ellipse className="left-[10%] top-[5%]" />
         <Blob className="bottom-[10%] left-0" />
         <Star className="left-0 top-[5%]" />
       </motion.div>
@@ -42,7 +43,7 @@ export default function Feature() {
         whileInView={animation.whileInView}
         viewport={animation.viewport}
         transition={animation.transition}
-        className="relative mt-20 w-full space-y-3 md:w-1/2"
+        className="relative flex-1 space-y-3"
       >
         <div className="text-lg uppercase text-primary">features</div>
         <h2 className="!mb-6 text-5xl font-bold">{jsonData.features.title}</h2>
@@ -64,7 +65,7 @@ export default function Feature() {
             </div>
           </div>
         ))}
-        <Blob className="right-0 top-0" />
+        <Blob className="-right-[20%] top-0" />
       </motion.div>
     </section>
   );

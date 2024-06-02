@@ -51,7 +51,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background font-clash-display text-foreground;
+    @apply overflow-x-hidden bg-background font-clash-display text-foreground;
   }
   img {
     @apply select-none;

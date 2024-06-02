@@ -67,7 +67,7 @@ export default function Gallery() {
             onClick={() => {
               setSelected(null);
             }}
-            className="fixed inset-0 z-[110] flex min-h-screen w-full items-center justify-center bg-details"
+            className="bg-background/20 fixed inset-0 z-[110] flex min-h-screen w-full items-center justify-center shadow backdrop-blur-md duration-300"
           >
             <motion.div
               layoutId={selected.id}

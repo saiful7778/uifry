@@ -34,7 +34,9 @@ export default function Hero() {
         className="relative mt-20 w-full max-md:order-2 md:w-[55%]"
       >
         <Blob className="-top-5 right-56" />
-        <h1 className="text-6xl font-bold">{jsonData.hero.headline}</h1>
+        <h1 className="text-5xl font-bold md:text-6xl">
+          {jsonData.hero.headline}
+        </h1>
         <p className="my-4 font-medium text-details">
           {jsonData.hero.subheadline}
         </p>

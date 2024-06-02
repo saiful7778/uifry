@@ -10,7 +10,7 @@ const style = {
 
 export default function Ellipse({ className }: { className?: string }) {
   return (
-    <div className={cn("absolute inset-0 z-[-2]", className)}>
+    <div className={cn("absolute inset-0 left-0 z-[-2] clear-both", className)}>
       <div className={cn(style.base)} />
       <div className={cn(style.base, style.position.secound)} />
       <div className={cn(style.base, style.position.third)} />

@@ -90,6 +90,14 @@
       "features": ["Feature A", "Feature B", "Feature C", "Feature D"]
     }
   ],
+  "getStarted": {
+    "title": "Ready To Get Started?",
+    "subtitle": "Risus habitant leo egestas mauris diam eget morbi tempus vulputate.",
+    "ctaButton": {
+      "text": "Download App",
+      "link": "/download"
+    }
+  },
   "footer": {
     "email": "help@frybix.com",
     "phone": "+1 234 456 678 89",

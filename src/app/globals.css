@@ -13,30 +13,33 @@
     --blob-primary: #ff5555;
     --blob-secondary: #fde598;
 
-    --details: #00000090;
+    --details: theme("textColor.gray.700");
 
     --accent: #000000;
     --accent-foreground: #ffffff;
 
-    --border: #000000;
-    --input: #000000;
-    --ring: #000000;
+    --border: theme("borderColor.gray.900");
+    --input: theme("borderColor.gray.900");
+    --ring: theme("borderColor.gray.900");
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: #222222;
-    --foreground: #ffffff;
+    --background: theme("backgroundColor.gray.950");
+    --foreground: theme("textColor.gray.50");
 
-    --details: #ffffff50;
+    --blob-primary: #ff555530;
+    --blob-secondary: #fde59830;
 
-    --accent: #ffffff;
+    --details: theme("textColor.gray.300");
+
+    --accent: theme("textColor.gray.50");
     --accent-foreground: #000000;
 
-    --border: #ffffff;
-    --input: #ffffff;
-    --ring: #ffffff;
+    --border: theme("borderColor.gray.50");
+    --input: theme("borderColor.gray.50");
+    --ring: theme("borderColor.gray.50");
   }
 }
 

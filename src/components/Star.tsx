@@ -6,9 +6,9 @@ import cn from "@/lib/utils/cn";
 import { useTheme } from "next-themes";
 
 export default function Star({ className }: { className?: string }) {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
-  return theme === "dark" ? (
+  return resolvedTheme === "dark" ? (
     <Image
       className={cn("star absolute z-[-1]", className)}
       src={starDark}

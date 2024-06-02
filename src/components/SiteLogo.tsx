@@ -6,11 +6,11 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 
 export default function SiteLogo() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
     <Link href="/">
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <Image src={siteLogoDark} alt="uifry logo" />
       ) : (
         <Image src={siteLogoLight} alt="uifry logo" />

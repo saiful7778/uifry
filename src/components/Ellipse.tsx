@@ -1,7 +1,7 @@
 import cn from "@/lib/utils/cn";
 
 const style = {
-  base: "absolute inset-0 rotate-45 rounded-[50%] border h-[200px] w-[350px] md:h-[300px] md:w-[450px]",
+  base: "absolute inset-0 rotate-45 rounded-[50%] border h-[200px] border-details w-[350px] md:h-[300px] md:w-[450px]",
   position: {
     secound: "-left-10 top-10",
     third: "-left-20 top-20",

@@ -1,5 +1,5 @@
 "use client";
-import FeatureBgImage from "../../../public/images/iPhone-13-Pro-Front.png";
+import phone01 from "../../../public/images/phone-image-01.png";
 import jsonData from "@/lib/data.json";
 import Image from "next/image";
 import Blob from "../Blob";
@@ -27,16 +27,16 @@ export default function Feature() {
         transition={animation.transition}
         className="relative flex-1"
       >
-        <Image
-          className="mx-auto"
-          src={FeatureBgImage}
-          width={200}
-          height={366}
-          alt="feature image"
-        />
         <Ellipse className="left-[10%] top-[5%]" />
         <Blob className="bottom-[10%] left-0" />
         <Star className="left-0 top-[5%]" />
+        <Image
+          className="mx-auto"
+          src={phone01}
+          width={200}
+          height={403}
+          alt="feature image"
+        />
       </motion.div>
       <motion.div
         initial={{ ...animation.initial, ...animation.initial.second }}
@@ -45,27 +45,32 @@ export default function Feature() {
         transition={animation.transition}
         className="relative flex-1 space-y-3"
       >
+        <Blob className="-right-[20%] top-0" />
         <div className="text-lg uppercase text-primary">features</div>
         <h2 className="!mb-6 text-5xl font-bold">{jsonData.features.title}</h2>
         {jsonData.features.items.map((feature, idx) => (
-          <div className="flex gap-2" key={"feature-" + idx}>
-            <div className="mt-1">
-              <Image
-                className="size-5"
-                src={feature.icon}
-                width={20}
-                height={20}
-                alt={`feature-${idx}-image`}
-                title={`feature ${idx + 1} image`}
-              />
-            </div>
+          <motion.div
+            initial={{ ...animation.initial, ...animation.initial.first }}
+            whileInView={animation.whileInView}
+            viewport={animation.viewport}
+            transition={{ ...animation.transition, delay: idx * 0.4 }}
+            className="flex gap-2"
+            key={"feature-" + idx}
+          >
+            <Image
+              className="mt-1 size-5"
+              src={feature.icon}
+              width={20}
+              height={20}
+              alt={`feature-${idx}-image`}
+              title={`feature ${idx + 1} image`}
+            />
             <div>
               <h6 className="text-lg font-semibold">{feature.title}</h6>
               <p className="text-details">{feature.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-        <Blob className="-right-[20%] top-0" />
       </motion.div>
     </section>
   );

@@ -38,7 +38,7 @@ export default function Navbar() {
           hidden: { opacity: 0, y: "-100%", x: "-50%" },
           visible: { opacity: 1, y: 0, x: "-50%" },
         }}
-        transition={{ duration: 1, type: "spring" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         initial="hidden"
         animate={hidden ? "hidden" : "visible"}
         className="bg-background/70 fixed left-1/2 top-0 z-[110] w-full p-2 shadow backdrop-blur-md"

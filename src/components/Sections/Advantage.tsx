@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
-import AdvantageBgImage1 from "../../../public/images/advantage-image-1.png";
-import AdvantageBgImage2 from "../../../public/images/advantage-image-2.png";
+import phone1 from "../../../public/images/phone-image-01.png";
+import phone2 from "../../../public/images/phone-image-02.png";
+import stacks from "../../../public/images/stacks.png";
+import card from "../../../public/images/card.png";
 import jsonData from "@/lib/data.json";
 import { Bell } from "lucide-react";
 import Star from "../Star";
@@ -21,7 +23,7 @@ export default function Advantage() {
     <>
       <section
         id="advantage"
-        className="relative my-16 flex flex-col justify-between gap-4 md:flex-row"
+        className="my-16 flex flex-col justify-between gap-4 md:flex-row"
       >
         <motion.div
           initial={{ ...animation.initial, ...animation.initial.first }}
@@ -53,18 +55,25 @@ export default function Advantage() {
           transition={animation.transition}
           className="relative flex w-full justify-center md:w-2/5"
         >
-          <Image
-            src={AdvantageBgImage1}
-            width={250}
-            height={400}
-            alt="Advantage image"
-          />
+          <div className="relative">
+            <Image
+              src={phone2}
+              width={200}
+              height={403}
+              alt="Advantage image"
+            />
+            <Image
+              className="absolute bottom-[40%] left-[30%] shadow-xl drop-shadow-xl"
+              src={stacks}
+              alt="stacks image"
+            />
+          </div>
           <Ellipse className="top-[5%]" />
           <Blob className="bottom-[10%] left-0" />
           <Star className="right-0 top-[5%]" />
         </motion.div>
       </section>
-      <section className="relative my-16 flex flex-col items-center justify-between gap-4 md:flex-row">
+      <section className="my-16 flex flex-col items-center justify-between gap-4 md:flex-row">
         <motion.div
           initial={{ ...animation.initial, ...animation.initial.first }}
           whileInView={animation.whileInView}
@@ -72,12 +81,19 @@ export default function Advantage() {
           transition={animation.transition}
           className="relative flex w-full justify-center max-md:order-2 md:w-2/5"
         >
-          <Image
-            src={AdvantageBgImage2}
-            width={250}
-            height={400}
-            alt="Advantage image"
-          />
+          <div className="relative">
+            <Image
+              src={phone1}
+              width={200}
+              height={403}
+              alt="Advantage image"
+            />
+            <Image
+              className="absolute left-[10%] top-[23%]"
+              src={card}
+              alt="card image"
+            />
+          </div>
           <Ellipse className="top-[5%]" />
           <Blob className="bottom-[10%] left-0" />
           <Star className="right-0 top-[5%]" />
